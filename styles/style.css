@@ -9,7 +9,9 @@
     margin: 0;
     padding: 0;
 }
-body{
+header,
+main,
+.footer-container{
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 25px;
@@ -268,6 +270,7 @@ body{
 /* News section starts here */
 .news-section{
     margin-top: 100px;
+    margin-bottom: 100px;
 }
 .news-description{
     padding: 0 100px;
@@ -309,13 +312,88 @@ body{
 }
 /* News section ends here */
 
+/* Footer section starts here */
+footer{
+    background: linear-gradient(270.00deg, rgba(255, 0, 0, 0.1),rgba(255, 137, 56, 0.1) 100%);
+}
+.footer-container{
+    padding: 100px 25px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-title{
+    color: rgb(28, 28, 28);
+    font-size: 1.3rem;
+    font-weight: 800;
+    line-height: 35px;
+}
+.footer-links{
+    margin-top: 25px;
+}
+.footer-item{
+    list-style: none;
+    margin-bottom: 5px;
+}
+.footer-link{
+    text-decoration: none;
+    color: rgb(73, 73, 73);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 25px
+}
+.footer-input{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+}
+.footer-input > label{
+    color: rgb(73, 73, 73);
+    font-size: .9rem;
+    font-weight: 400;
+}
+.footer-btn{
+    background: linear-gradient(90.00deg, rgb(255, 0, 0) 0%,rgb(255, 137, 56) 100%);
+    border: none;
+    padding: 5px 8px;
+    border-radius: 50%;
+    color: white;
+    font-weight: 800;
+}
+.footer-items > input{
+    width: 90%;
+    border-bottom: 1px solid  rgb(73, 73, 73);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background: none;
+    outline: none;
+}
+.footer-social{
+    margin-top: 50px;
+}
+.footer-social > a{
+    color: rgb(73, 73, 73);
+    margin-right: 15px;
+    font-size: 1.2rem;
+}
+.copyright{
+    padding: 25px;
+    text-align: center;
+    color: rgb(73, 73, 73);
+    font-family: Manrope;
+    font-size: .9rem;
+    font-weight: 500;
+}
+/* Footer section ends here */
 
 
 /*==================== Responsive design starts here (For mobile)======================= */
 @media screen and (max-width:576px) {
     .header-container,
     .clients-container,
-    .news-container{
+    .news-container,
+    .footer-container{
         flex-direction: column;
     }
     .header-content,
@@ -379,6 +457,9 @@ body{
     }
     #special-card{
         display: none;
+    }
+    .footer-container{
+        gap: 50px;
     }
 }
 /*==================== Responsive design ends here (For mobile)==============================*/
