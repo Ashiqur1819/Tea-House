@@ -19,7 +19,7 @@ body{
 /* Shared styles starts here */
 .btn{
     padding: 15px 25px;
-    border: none;
+    border: 1px solid white;
     border-radius: 10px;
     font-size: 1.1rem;
     color: white;
@@ -28,7 +28,7 @@ body{
     align-items: center;
     gap: 10px;
     cursor: pointer;
-    background: linear-gradient(270.00deg, rgb(255, 0, 0) 0%,rgb(255, 137, 56) 100%);
+    background: linear-gradient(90.00deg, rgb(255, 0, 0) 0%,rgb(255, 137, 56) 100%);
 }
 .text-center{
     text-align: center;
@@ -38,6 +38,7 @@ body{
     font-size: 3rem;
     font-weight: 800;
     margin-bottom: 25px;
+    line-height: 60px;
 }
 .description{
     color: rgb(119, 119, 119);
@@ -131,8 +132,7 @@ body{
 
 /* Quality section starts here */
 .quality-section{
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 100px;
 }
 .quality-container{
     display: flex;
@@ -197,16 +197,87 @@ body{
 }
 /* Quality section ends here */
 
+/* Clients section starts here */
+.clients-section{
+    margin-top: 100px;
+    padding: 100px 50px;
+    border-radius: 10px;
+    background: linear-gradient(270.00deg, rgb(255, 0, 0) 0%,rgb(255, 137, 56) 100%);
+}
+.clients-container{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+.clients-content{
+    padding-right: 50px;
+    width: 90%;
+}
+.clients-title{
+    color: rgb(244, 244, 244);
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 60px;
+    margin-bottom: 25px;
+}
+.clients-description{
+    color: rgb(244, 244, 244);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 25px;
+    margin-bottom: 50px;
+    width: 80%;
+}
+.clients-card-1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+.clients-card{
+    padding: 50px 25px;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+    opacity: .3;
+}
+.clients-card-header{
+    position: absolute;
+    top: -25px;
+    left: -25px;
+}
+.clients-card-2{
+    position: relative;
+}
+#special-card{
+    opacity: 1;
+    position: absolute;
+    bottom: 135px;
+    left: -140px;
+    width: 90%;
+}
+.clients-card-footer{
+    text-align: right;
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+}
+/* Clients section ends here */
+
 
 
 /*==================== Responsive design starts here (For mobile)======================= */
 @media screen and (max-width:576px) {
-    .header-container{
+    .header-container,
+    .clients-container{
         flex-direction: column;
     }
     .header-content,
     .quality-grid,
-    .quality-content{
+    .quality-content,
+    .clients-content,
+    .clients-description{
         width: 100%;
     }
     .header-image{
@@ -223,8 +294,10 @@ body{
         left: 0;
         bottom: 0;
     }
-    .section-title{
+    .section-title,
+    .clients-title{
         font-size: 2rem;
+        line-height: 40px;
     }
     .featured-title, .featured-description{
         padding: 0;
@@ -238,8 +311,26 @@ body{
     .card-title{
         font-size: 1.5rem;
     }
+    .quality-section{
+        margin-top: 50px;
+    }
     .quality-container{
         flex-direction: column-reverse;
+    }
+    .clients-section{
+        padding: 50px 30px;
+    }
+    .clients-container{
+        gap: 100px;
+    }
+    .clients-content{
+        padding-right: 0;
+    }
+    .clients-card{
+        opacity: 1;
+    }
+    #special-card{
+        display: none;
     }
 }
 /*==================== Responsive design ends here (For mobile)==============================*/
@@ -248,7 +339,8 @@ body{
 
 /* Responsive design starts here (For tablet) */
 @media screen and (min-width:576px) and (max-width:992px) {
-    .header-container{
+    .header-container,
+    .clients-container{
         flex-direction: column;
     }
     .featured-container{
@@ -261,8 +353,15 @@ body{
         flex-direction: column-reverse;
     }
     .quality-grid,
-    .quality-content{
+    .quality-content,
+    .clients-description{
         width: 100%;
+    }
+    .clients-card{
+        opacity: 1;
+    }
+    #special-card{
+        display: none;
     }
 }
 /* Responsive design ends here (For tablet) */
