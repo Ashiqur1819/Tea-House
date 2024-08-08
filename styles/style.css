@@ -390,6 +390,7 @@ footer{
 
 /*==================== Responsive design starts here (For mobile)======================= */
 @media screen and (max-width:576px) {
+/* Shared styles starts here */
     .header-container,
     .clients-container,
     .news-container,
@@ -403,6 +404,23 @@ footer{
     .clients-description{
         width: 100%;
     }
+    .section-title,
+    .clients-title{
+        font-size: 2rem;
+        line-height: 40px;
+    }
+    .featured-title, 
+    .featured-description,
+    .news-description{
+        padding: 0;
+    }
+    .quality-section,
+    .news-section{
+        margin-top: 50px;
+    }
+/* Shared styles ends here */
+
+/* Header section starts here */
     .header-image{
         width: 100%;
     }
@@ -417,16 +435,9 @@ footer{
         left: 0;
         bottom: 0;
     }
-    .section-title,
-    .clients-title{
-        font-size: 2rem;
-        line-height: 40px;
-    }
-    .featured-title, 
-    .featured-description,
-    .news-description{
-        padding: 0;
-    }
+/* Header section ends here */
+
+/* Featured section starts here */
     .featured-container{
         grid-template-columns: 1fr;
     }
@@ -436,13 +447,15 @@ footer{
     .card-title{
         font-size: 1.5rem;
     }
-    .quality-section,
-    .news-section{
-        margin-top: 50px;
-    }
+/* Featured section ends here */
+
+/* Quality section starts here */
     .quality-container{
         flex-direction: column-reverse;
     }
+/* Quality section ends here */
+
+/* Clients section starts here */
     .clients-section{
         padding: 50px 30px;
     }
@@ -458,42 +471,59 @@ footer{
     #special-card{
         display: none;
     }
+/* Clients section ends here */
+    
+/* Footer section starts here */
     .footer-container{
         gap: 50px;
     }
+/* Footer section ends here */
 }
 /*==================== Responsive design ends here (For mobile)==============================*/
 
 
-
 /* Responsive design starts here (For tablet) */
 @media screen and (min-width:576px) and (max-width:992px) {
+/* Shared styles starts here */
     .header-container,
     .clients-container{
         flex-direction: column;
-    }
-    .featured-container{
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .featured-card{
-        margin-bottom: 25px;
-    }
-    .quality-container{
-        flex-direction: column-reverse;
     }
     .quality-grid,
     .quality-content,
     .clients-description{
         width: 100%;
     }
+/* Shared styles ends here */
+
+/* Featured section starts here */
+    .featured-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .featured-card{
+        margin-bottom: 25px;
+    }
+/* Featured section ends here */
+
+/* Quality section starts here */
+    .quality-container{
+        flex-direction: column-reverse;
+    }
+/* Quality section ends here */
+
+/* Clients section starts here */
     .clients-card{
         opacity: 1;
     }
     #special-card{
         display: none;
     }
+/* Clients section starts here */
+
+/* News section starts here */
     .news-container{
         gap: 15px;
     }
+/* News section ends here */
 }
 /* Responsive design ends here (For tablet) */
